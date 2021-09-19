@@ -1,0 +1,9 @@
+defaults {
+    docker-image        "cannable/backup"
+    buildah-image       "cannable/backup"
+    buildah-tag         "latest"
+    buildah-arch        amd64
+    buildah-dockerFile  ./Dockerfile
+    buildah-dir         .
+    buildah-arches      {amd64 arm64 arm}
+}
