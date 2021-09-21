@@ -1,0 +1,15 @@
+target "docker-backup-multiarch" {
+    title   "Build docker-backup image"
+    version 0.1
+
+    help {
+        Build docker-backup multiarch image.
+    }
+
+    run {
+        run buildah-bud-multiarch
+        run buildah-docker-push-multiarch
+        run buildah-manifest-multiarch
+    }
+
+}
